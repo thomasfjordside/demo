@@ -1,6 +1,4 @@
 document.addEventListener("DOMContentLoaded", function () {
-    console.log("DOM is ready!");
-    console.log("Hello World!");
     // Code to be executed when the DOM is ready
 
     const animateIn = document.querySelectorAll(".animation-layer");
@@ -21,4 +19,10 @@ document.addEventListener("DOMContentLoaded", function () {
             layer.style.strokeDashoffset = layer.getTotalLength();
         }
     }
+
+
+    document.body.addEventListener( 'mousemove', (e) => {
+      document.documentElement.style.setProperty('--mouse-x', `${e.pageX}px`);
+      document.documentElement.style.setProperty('--mouse-y', `${e.pageY}px`);
+    });
 });
